@@ -324,19 +324,11 @@ const handleGuestbookSubmit = async (e) => {
       <h2 className="text-4xl font-bold text-[#F58AB0]">
         Vị trí sự kiện
       </h2>
-      <p className="mt-4 text-lg text-[#8D6977] leading-8">
-        Mọi người xem dẫn đường dưới đây nha, gồm bản đồ và hướng dẫn thông hành để vào được khu lễ nhé!
-      </p>
     </div>
-
     {/* GOOGLE MAP */}
     <div className="rounded-[30px] overflow-hidden border border-pink-200 shadow-[0_10px_30px_rgba(255,183,213,0.2)]">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.3931583715616!2d106.7626157!3d10.8576719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752758ae86dee5%3A0x4e061cbc97977ab8!2zRGggTmfDom4gSMOgbmc!5e0!3m2!1svi!2s!4v1779643316375!5m2!1svi!2s"
-        width="100%"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen=""
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1959.1914980477889!2d106.7627419!3d10.8584466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752758ae86dee5%3A0x4e061cbc97977ab8!2zRGggTmfDom4gSMOgbmc!5e0!3m2!1svi!2s!4v1779783192116!5m2!1svi!2s"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         className="w-full"
@@ -344,7 +336,7 @@ const handleGuestbookSubmit = async (e) => {
     </div>
 
     {/* INFO */}
-    <div className="mt-10 grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-[1fr_1.1fr]">
+    <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
 
       {/* GUIDE */}
       <div className="bg-white/70 rounded-[32px] p-6 sm:p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.2)]">
@@ -354,15 +346,15 @@ const handleGuestbookSubmit = async (e) => {
 
         <div className="space-y-4 sm:space-y-5 text-base sm:text-lg leading-8 text-[#7D5A67]">
           <p>
-             Đi xe công nghệ ưu tiên cổng chính (Hoàng Diệu 2) để đỡ đi bộ nhìu nha.
+             Đi xe công nghệ ưu tiên cổng chính (Hoàng Diệu 2) để đỡ đi bộ nhìu.
           </p>
 
           <p>
-             Đi xe máy vào cổng 16 hoặc cổng 17 để gửi xe ở bãi xe nhóe.
+             Đi xe máy vào cổng 16 hoặc cổng 17.
           </p>
 
           <p>
-             Đi ô tô vào cổng 17 để vào chổ đỗ xe ô tô nhe.
+             Đi ô tô vào cổng 17.
           </p>
         </div>
       </div>
@@ -384,16 +376,6 @@ const handleGuestbookSubmit = async (e) => {
   <div className="max-w-6xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
 
     {/* HEADER */}
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold text-[#F58AB0]">
-        Xác nhận tham dự & Lời chúc
-      </h2>
-
-      <p className="mt-4 text-lg text-[#8D6977] leading-8">
-        Hãy cho mình biết bạn có tham dự không và để lại vài lời đáng yêu nhé 
-      </p>
-    </div>
-
     <div className="grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-[1.1fr_0.9fr]">
 
       {/* RSVP */}
