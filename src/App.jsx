@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import { db } from './firebase'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import BackgroundMusic from './components/BackgroundMusic'
 
 function App() {
 
@@ -110,6 +111,7 @@ const handleGuestbookSubmit = async (e) => {
 
   return (
     <div className="min-h-screen bg-[#FFEAF4] text-[#7D5A67] relative overflow-hidden">
+      <BackgroundMusic />
 
       {/* BACKGROUND GLOW */}
       <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-pink-300 opacity-30 blur-3xl rounded-full"></div>
@@ -225,9 +227,10 @@ const handleGuestbookSubmit = async (e) => {
             <h3 className="text-[#F58AB0] text-2xl font-semibold">
               Địa điểm
             </h3>
-
             <p className="mt-4 text-lg">
-              Trường Đại học Ngân hàng TP.HCM - Cơ sở Hoàng Diệu 2
+              Trường Đại học Ngân hàng TP.HCM
+               <br/>
+              Cơ sở Hoàng Diệu 2
             </p>
 
           </div>
@@ -263,9 +266,13 @@ const handleGuestbookSubmit = async (e) => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-              <div className="calendar-container">
-                <h3 className="text-2xl font-bold text-[#F58AB0] text-center mb-6"> Lịch</h3>
+            <div className="flex justify-center items-center">
+              <div className="calendar-container mx-auto">
+                
+                <h3 className="text-2xl font-bold text-[#F58AB0] text-center mb-6">
+                  Lịch
+                </h3>
+
                 <div className="calendar-grid">
                   <div className="calendar-day-name">T2</div>
                   <div className="calendar-day-name">T3</div>
@@ -274,25 +281,23 @@ const handleGuestbookSubmit = async (e) => {
                   <div className="calendar-day-name">T6</div>
                   <div className="calendar-day-name">T7</div>
                   <div className="calendar-day-name">CN</div>
-                  
-                  {[...Array(4)].map((_, i) => <div key={`empty-${i}`} className="calendar-empty"></div>)}
+
+                  {[...Array(4)].map((_, i) => (
+                    <div key={`empty-${i}`} className="calendar-empty"></div>
+                  ))}
+
                   {[...Array(31)].map((_, i) => (
-                    <div key={i} className={`calendar-date ${i + 1 === 31 ? 'calendar-highlight' : ''}`}>
+                    <div
+                      key={i}
+                      className={`calendar-date ${
+                        i + 1 === 31 ? 'calendar-highlight' : ''
+                      }`}
+                    >
                       {i + 1}
                     </div>
                   ))}
                 </div>
-              </div>
 
-              <div className="text-center flex flex-col justify-center">
-                <p className="text-lg text-[#8D6977] mb-6">
-                   Ngày tốt nghiệp 
-                </p>
-                <p className="text-5xl font-bold text-[#F58AB0]">31/05</p>
-                <p className="text-2xl font-semibold text-[#9C7382] mt-4">2026</p>
-                <p className="text-lg text-[#8D6977] mt-8">
-                  Hẹn gặp mọi người vào ngày đặc biệt này nhé!
-                </p>
               </div>
             </div>
           </div>
