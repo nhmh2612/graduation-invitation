@@ -56,6 +56,11 @@ function App() {
 const handleRsvpSubmit = async (e) => {
   e.preventDefault()
 
+  if (rsvpData.attending === null) {
+    alert("Bạn nhớ chọn có tham dự hay không nha 💕")
+    return
+  }
+
   try {
 
     await addDoc(collection(db, "rsvp"), {
@@ -104,7 +109,7 @@ const handleGuestbookSubmit = async (e) => {
 }
 
   return (
-    <div className="min-h-screen bg-[#FFEAF4] text-[#7D5A67] overflow-x-hidden relative">
+    <div className="min-h-screen bg-[#FFEAF4] text-[#7D5A67] relative overflow-hidden">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-pink-300 opacity-30 blur-3xl rounded-full"></div>
@@ -331,7 +336,7 @@ const handleGuestbookSubmit = async (e) => {
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1959.1914980477889!2d106.7627419!3d10.8584466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752758ae86dee5%3A0x4e061cbc97977ab8!2zRGggTmfDom4gSMOgbmc!5e0!3m2!1svi!2s!4v1779783192116!5m2!1svi!2s"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="w-full"
+        className="w-full h-[450px] border-0 block"
       ></iframe>
     </div>
 
@@ -364,7 +369,7 @@ const handleGuestbookSubmit = async (e) => {
           <img
             src="/images/map.jpg"
             alt="Bản đồ trường"
-            className="w-full h-auto object-contain max-h-[720px]"
+            className="block w-full h-auto object-contain max-h-[720px]"
           />
         </div>
     </div>
