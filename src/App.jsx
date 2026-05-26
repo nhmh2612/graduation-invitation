@@ -104,7 +104,7 @@ const handleGuestbookSubmit = async (e) => {
 }
 
   return (
-    <div className="min-h-screen bg-[#FFEAF4] text-[#7D5A67] overflow-hidden relative">
+    <div className="min-h-screen bg-[#FFEAF4] text-[#7D5A67] overflow-x-hidden relative">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-pink-300 opacity-30 blur-3xl rounded-full"></div>
@@ -112,7 +112,7 @@ const handleGuestbookSubmit = async (e) => {
       <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-rose-300 opacity-30 blur-3xl rounded-full"></div>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 text-center relative z-10">
+      <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 text-center relative z-10">
 
         <div className="p-3 rounded-full bg-[#FFF5FA] shadow-[0_10px_50px_rgba(255,183,213,0.5)]">
           <img
@@ -151,9 +151,9 @@ const handleGuestbookSubmit = async (e) => {
       </section>
 
       {/* LETTER */}
-      <section className="px-6 pb-24 relative z-10">
+      <section className="px-4 sm:px-6 pb-24 relative z-10">
 
-        <div className="max-w-3xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
+        <div className="max-w-3xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
 
           <h2 className="text-center text-4xl font-bold text-[#F58AB0]">
             Gửi bạn bè và gia đình
@@ -187,9 +187,9 @@ const handleGuestbookSubmit = async (e) => {
       </section>
 
       {/* EVENT */}
-      <section className="px-6 pb-24 relative z-10">
+      <section className="px-4 sm:px-6 pb-24 relative z-10">
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-4 sm:gap-6">
 
           <div className="bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[35px] p-8 text-center border border-pink-200 shadow-[0_10px_40px_rgba(255,183,213,0.3)]">
 
@@ -210,7 +210,7 @@ const handleGuestbookSubmit = async (e) => {
             </h3>
 
             <p className="mt-4 text-lg">
-              10:30 sáng
+              10:30 - 12:00
             </p>
 
           </div>
@@ -232,14 +232,14 @@ const handleGuestbookSubmit = async (e) => {
       </section>
 
       {/* COUNTDOWN */}
-      <section className="px-6 pb-24 relative z-10">
+      <section className="px-4 sm:px-6 pb-24 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
+          <div className="bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
             <h2 className="text-center text-4xl font-bold text-[#F58AB0] mb-12">
               Cùng đếm ngược thời gian !
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 mb-12">
               <div className="countdown-box">
                 <div className="countdown-value">{countdown.days}</div>
                 <div className="countdown-label">Ngày</div>
@@ -258,7 +258,7 @@ const handleGuestbookSubmit = async (e) => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <div className="calendar-container">
                 <h3 className="text-2xl font-bold text-[#F58AB0] text-center mb-6"> Lịch</h3>
                 <div className="calendar-grid">
@@ -295,8 +295,8 @@ const handleGuestbookSubmit = async (e) => {
       </section>
 
       {/* NOTES */}
-      <section className="px-6 pb-24 relative z-10">
-        <div className="max-w-4xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
+      <section className="px-4 sm:px-6 pb-24 relative z-10">
+        <div className="max-w-4xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
           <h2 className="text-center text-4xl font-bold text-[#F58AB0]">
             Một vài lưu ý nhỏ nhỏ xinh xinh
           </h2>
@@ -316,8 +316,8 @@ const handleGuestbookSubmit = async (e) => {
       </section>
 
 {/* LOCATION & GUIDE */}
-<section className="px-6 pb-32 relative z-10">
-  <div className="max-w-6xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
+<section className="px-4 sm:px-6 pb-32 relative z-10">
+  <div className="max-w-6xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
     
     {/* TITLE */}
     <div className="text-center mb-10">
@@ -344,15 +344,15 @@ const handleGuestbookSubmit = async (e) => {
     </div>
 
     {/* INFO */}
-    <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+    <div className="mt-10 grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-[1fr_1.1fr]">
 
       {/* GUIDE */}
-      <div className="bg-white/70 rounded-[32px] p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.2)]">
-        <h3 className="text-3xl font-bold text-[#F58AB0] mb-6">
+      <div className="bg-white/70 rounded-[32px] p-6 sm:p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.2)]">
+        <h3 className="text-2xl sm:text-3xl font-bold text-[#F58AB0] mb-6">
           Hướng dẫn thông hành
         </h3>
 
-        <div className="space-y-5 text-lg leading-8 text-[#7D5A67]">
+        <div className="space-y-4 sm:space-y-5 text-base sm:text-lg leading-8 text-[#7D5A67]">
           <p>
              Đi xe công nghệ ưu tiên cổng chính (Hoàng Diệu 2) để đỡ đi bộ nhìu nha.
           </p>
@@ -380,8 +380,8 @@ const handleGuestbookSubmit = async (e) => {
 </section>
 
 {/* RSVP & GUESTBOOK */}
-<section className="px-6 pb-24 relative z-10">
-  <div className="max-w-6xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
+<section className="px-4 sm:px-6 pb-24 relative z-10">
+  <div className="max-w-6xl mx-auto bg-[#FFF5FA]/90 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_50px_rgba(255,183,213,0.35)]">
 
     {/* HEADER */}
     <div className="text-center mb-12">
@@ -394,13 +394,13 @@ const handleGuestbookSubmit = async (e) => {
       </p>
     </div>
 
-    <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+    <div className="grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-[1.1fr_0.9fr]">
 
       {/* RSVP */}
-      <div className="bg-white/70 rounded-[32px] p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.15)]">
+      <div className="bg-white/70 rounded-[32px] p-6 sm:p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.15)]">
 
         <div className="mb-8">
-          <h3 className="text-3xl font-bold text-[#F58AB0]">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#F58AB0]">
             Xác nhận tham dự
           </h3>
 
@@ -488,10 +488,10 @@ const handleGuestbookSubmit = async (e) => {
       </div>
 
       {/* GUESTBOOK */}
-      <div className="bg-white/70 rounded-[32px] p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.15)]">
+      <div className="bg-white/70 rounded-[32px] p-6 sm:p-8 border border-pink-100 shadow-[0_10px_30px_rgba(255,183,213,0.15)]">
 
         <div className="mb-8">
-          <h3 className="text-3xl font-bold text-[#F58AB0]">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#F58AB0]">
             Lời chúc
           </h3>
 
@@ -563,10 +563,10 @@ const handleGuestbookSubmit = async (e) => {
 </section>
 
 {/* ENDING */}
-<section className="px-6 pb-24 relative z-10">
+<section className="px-4 sm:px-6 pb-24 relative z-10">
   <div className="max-w-3xl mx-auto text-center">
 
-    <div className="bg-[#FFF5FA]/70 backdrop-blur-xl rounded-[40px] p-12 border border-pink-200 shadow-[0_10px_40px_rgba(255,183,213,0.25)]">
+    <div className="bg-[#FFF5FA]/70 backdrop-blur-xl rounded-[40px] p-6 sm:p-8 md:p-12 border border-pink-200 shadow-[0_10px_40px_rgba(255,183,213,0.25)]">
 
       <p className="text-2xl md:text-3xl leading-[1.8] text-[#9C7382] italic">
         Cảm ơn vì đã trở thành
